@@ -1,0 +1,27 @@
+{
+	"name": "ds_order_cleansed",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_lake_orders",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "03 Cleansed"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('orders/',formatDateTime(utcnow() , 'yyyy-MM-dd'))\n",
+					"type": "Expression"
+				},
+				"fileSystem": "cleansed"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

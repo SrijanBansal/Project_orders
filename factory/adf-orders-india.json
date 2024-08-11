@@ -1,0 +1,15 @@
+{
+	"name": "adf-orders-india",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned,UserAssigned",
+		"principalId": "376808c3-f8bd-4d3d-9719-1252eddc7a7e",
+		"tenantId": "e534f371-48f2-4727-9623-a2a81810e125",
+		"userAssignedIdentities": {
+			"/subscriptions/6c6ed047-1086-42ca-b68e-9bbd42e6afbf/resourcegroups/rg-orders-dev-centralIndia-001/providers/Microsoft.ManagedIdentity/userAssignedIdentities/df-managed-orders": {
+				"clientId": "327a1cdd-396b-4a46-ba29-36a170504b09",
+				"principalId": "3f8569f1-384e-4ef7-a8b1-cfe2a9de813c"
+			}
+		}
+	}
+}
