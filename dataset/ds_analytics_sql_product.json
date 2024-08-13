@@ -1,0 +1,38 @@
+{
+	"name": "ds_analytics_sql_product",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_orders",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "05 Analytics"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "PRODUCT_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "MONTH_YEAR",
+				"type": "date"
+			},
+			{
+				"name": "ORDER_STATUS",
+				"type": "varchar"
+			},
+			{
+				"name": "TOTAL_AMOUNT",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "ANALYTICS",
+			"table": "PRODUCTS_ORDERS_MONTHLY"
+		}
+	}
+}

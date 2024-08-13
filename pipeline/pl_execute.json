@@ -63,6 +63,29 @@
 					},
 					"waitOnCompletion": true
 				}
+			},
+			{
+				"name": "Structured to Analytics",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Cleansed to Structured",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_order_structured_to_analytics",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
 			}
 		],
 		"annotations": [],
